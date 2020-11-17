@@ -1,19 +1,18 @@
 <template>
-    <div>
-        <h1>Todos</h1>
-        <div v-for="todo in todos" :key="todo.id">
-            <h3>{{ todo.title }}</h3>
-        </div>
+  <div>
+    <div v-for="todo in todos" :key="todo.id">
+      <TodoItem :todo="todo" v-on:del-todo="$emit('del-todo', todo.id)" />
     </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        name:'todos',
-        props:["todos"]
-    }
+import TodoItem from "./TodoItem";
+export default {
+  name: "todos",
+  props: ["todos"],
+  components: { TodoItem },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
