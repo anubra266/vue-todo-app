@@ -17,7 +17,5 @@ yarn serve
 yarn build
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+### A Screenshot
+![](./screenshot.png)
